@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# 密钥（最重要的一行）
+.env
+.env.local
+
+# 运行时数据（向量库、上传文档、数据库、日志）
+# 必须写 data/* 而不是 data/ —— 写 data/ 会忽略整个目录，
+# Git 便不再遍历其中，下面的例外规则会【静默失效】
+data/*
+!data/.gitkeep
+
+# 模型缓存
+.cache/
+*.gguf
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 测试与覆盖率
+.pytest_cache/
+.coverage
+htmlcov/
+
+# AI 助手本地工作记录（不对外开源）
+.workbuddy/
+#docs目录两个外部架构设计文档
+/docs/DAILY_PLAN.md
+/docs/RESUME_AND_INTERVIEW.md
+

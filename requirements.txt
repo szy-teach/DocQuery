@@ -1,0 +1,41 @@
+# ---- 核心框架（锁版本） ----
+langchain==1.4.1
+langchain-core==1.6.3
+langchain-community==0.4.2          # 不遵循 semver，必须锁死
+langchain-text-splitters==1.1.2
+
+# ---- 模型集成 ----
+langchain-deepseek==1.1.0           # 云端 LLM（DeepSeek 官方集成）
+langchain-openai==1.6.2             # 百炼 Embedding（OpenAI 兼容协议）
+langchain-ollama==1.1.0             # 本地 LLM + Embedding
+langchain-chroma==1.1.0             # 向量库集成
+
+# ---- 向量库 ----
+chromadb==1.5.9
+
+# ---- 文档解析 ----
+pypdf==6.19.0                       # 注意：PyPDF2 已归档，改用 pypdf
+python-docx==1.2.0
+docx2txt==0.9
+
+# ---- 后端 ----
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+python-multipart==0.0.32            # 文件上传必需，容易漏
+pydantic==2.13.5
+pydantic-settings==2.15.0
+httpx==0.28.1
+
+# ---- 前端 ----
+gradio==6.27.0
+
+# ---- 工具 ----
+python-dotenv==1.2.3
+loguru==0.7.3
+tenacity==9.1.4                     # 重试（云端 API 限流时有用）
+rich==15.0.0                        # CLI 美化输出
+
+# ---- 开发工具（正式部署可精简） ----
+pytest==9.1.1
+pytest-cov
+ruff==0.16.8
